@@ -1,4 +1,4 @@
-## Beamer mtheme
+## Beamer glasgow theme
 
 The *glasgowtheme* is a Beamer theme with minimal visual distraction,
 designed around the University of Glasgow's branding guidelines. The
