@@ -1,0 +1,104 @@
+% Beamer mtheme
+%
+% The Glasgow Theme
+% Copyright 2016 Daniel Williams
+% Licensed under CC-BY-SA 4.0 Interational.
+%
+% The Glasgow Theme was adapted from the Metropolis theme, which is
+% Copyright 2014 Matthias Vogelgesang
+% Licensed under CC-BY-SA 4.0 International.
+%
+% The initial template comes from the HSRM beamer theme by Benjamin Weiss, which
+% you can find at https://github.com/hsrmbeamertheme/hsrmbeamertheme.
+%
+
+\ProvidesPackage{beamercolorthemeglasgow}
+
+
+%}}}
+%{{{ --- Options ----------------------
+
+\newif\if@beamer@glasgow@blockbg
+\@beamer@glasgow@blockbgfalse
+\DeclareOptionBeamer{blockbg}{\@beamer@glasgow@blockbgtrue}
+
+\DeclareOptionBeamer*{%
+  \PackageWarning{beamercolorthemeglasgow}{Unknown option `\CurrentOption'}%
+}
+
+\ProcessOptionsBeamer
+
+%}}}
+%{{{ --- Colors ---------------------
+
+
+%%%
+% UoG COLOR SCHEME
+%%%
+\definecolor{university-blue}{HTML}{003865}
+% Quality
+\definecolor{university-heather}{HTML}{5B537D}
+\definecolor{university-aquamarine}{HTML}{9AB9AD}
+\definecolor{university-rose}{HTML}{D278AB}
+\definecolor{university-slate}{HTML}{4F5961}
+\definecolor{university-mocha}{HTML}{B59079}
+% Vivid
+\definecolor{university-lawn}{HTML}{84BD00}
+\definecolor{university-cobalt}{HTML}{009DEC}
+\definecolor{university-turquoise}{HTML}{00B5D1}
+\definecolor{university-sunshine}{HTML}{FFDC36}
+\definecolor{university-pumpkin}{HTML}{FFB948}
+\definecolor{university-thistle}{HTML}{951272}
+\definecolor{university-pillarbox}{HTML}{B30C00}
+\definecolor{university-lavendar}{HTML}{5B4D94}
+% Rich
+\definecolor{university-forest}{HTML}{005133}
+\definecolor{university-burgundy}{HTML}{7D2239}
+\definecolor{university-rust}{HTML}{9A3A06}
+\definecolor{university-sandstone}{HTML}{52473B}
+
+
+% Old Metro colors for compatibility
+\definecolor{mDarkBrown}{HTML}{604c38}
+\definecolor{mDarkTeal}{HTML}{23373b}
+
+\definecolor{mLightBrown}{HTML}{EB811B}
+\definecolor{mMediumBrown}{HTML}{C87A2F}
+
+%
+\setbeamercolor{palette primary}{fg=university-blue, bg=white}
+\setbeamercolor{palette secondary}{fg=white, bg=university-blue}
+\setbeamercolor{palette quaternary}{fg=university-thistle}
+\setbeamercolor{palette tertiary}{fg=white, bg=university-heather}
+
+\setbeamercolor{title}{parent=palette primary}
+\setbeamercolor{subtitle}{parent=palette primary}
+\setbeamercolor{author}{parent=palette primary}
+\setbeamercolor{date}{parent=palette primary}
+\setbeamercolor{institute}{parent=palette primary}
+
+\setbeamercolor{section title}{parent=palette primary}
+\setbeamercolor{frametitle}{parent=palette secondary}
+\setbeamercolor{background canvas}{parent=palette primary}
+\setbeamercolor{structure}{fg=university-slate}
+
+\setbeamercolor{normal text}{fg=black!97}
+\setbeamercolor{alerted text}{fg=university-pillarbox}
+
+\setbeamercolor{footnote}{fg=university-slate!50}
+\setbeamercolor{footnote mark}{fg=.}
+\setbeamercolor{page number in head/foot}{fg=university-lavendar}
+
+\if@beamer@glasgow@blockbg
+
+\setbeamercolor{block title}{parent=palette primary,bg=palette primary.bg!80!fg}
+\setbeamercolor{block title alerted}{use=alerted text,parent=palette primary,fg=alerted text.fg}
+\setbeamercolor{block title example}{use=example text,parent=palette primary,fg=example text.fg}
+
+\setbeamercolor{block body}{parent=normal text,use=block title,bg=block title.bg}
+\setbeamercolor{block body alerted}{parent=normal text,use=block title alerted,bg=block title alerted.bg}
+\setbeamercolor{block body example}{parent=normal text,use=block title example,bg=block title example.bg}
+
+\fi
+
+\mode<all>
