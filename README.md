@@ -8,7 +8,7 @@ theme is a modified version of a theme described at
 Not convinced?  Have a look at the [demo slides](demo.pdf).
 
 
-![Sample](http://i.imgur.com/wP4uGbS.png)
+<!-- ![Sample](http://i.imgur.com/wP4uGbS.png) -->
 
 
 ### Installation
@@ -18,10 +18,18 @@ with `.sty` to the source files of your presentation. As of now, fonts, colors
 and the section indicator are hardcoded into the theme. For the demo you need
 
 * XeLaTeX,
+* epspdf (to convert the UoG logo to PDF format)
+* wget (to retrieve the logo from the University server)
+* bash (to run the download script)
 * the [Fira Sans](https://github.com/mozilla/Fira) font,
 * TikZ and
 * the Python package [Pygments](http://pygments.org/) that you can get with `pip
   install pygments`.
+
+After cloning the repository you should run the `download_logos.sh`
+script to download any of the logos the theme requires which are held
+under copyright; you'll normally need to be on campus to do this, or
+connected to the University's VPN.
 
 Depending on the Linux distribution, the packaged name of Fira Sans might be
 `Fira Sans OT` instead of `Fira Sans`. In that case, you may have to edit
@@ -34,7 +42,7 @@ To build the demo slides just run `make` in the top-level directory. To use this
 theme with [Pandoc](http://johnmacfarlane.net/pandoc/)-based presentations, you
 can run the following command
 
-    $ pandoc -t beamer --latex-engine=xelatex -V theme:m -o output.pdf input.md
+    $ pandoc -t beamer --latex-engine=xelatex -V theme:glasgow -o output.pdf input.md
 
 
 ### Customization
