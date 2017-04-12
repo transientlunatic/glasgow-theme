@@ -26,10 +26,11 @@ and the section indicator are hardcoded into the theme. For the demo you need
 * the Python package [Pygments](http://pygments.org/) that you can get with `pip
   install pygments`.
 
-After cloning the repository you should run the `download_logos.sh`
-script to download any of the logos the theme requires which are held
-under copyright; you'll normally need to be on campus to do this, or
-connected to the University's VPN.
+The package can be installed by running `make install` in the
+repository, which will automatically place the files in your TEXMF
+tree. This will also download the logo files, however, you'll need to
+be either on campus or connected to the UoG VPN system for this to
+work.
 
 Depending on the Linux distribution, the packaged name of Fira Sans might be
 `Fira Sans OT` instead of `Fira Sans`. In that case, you may have to edit
